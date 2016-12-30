@@ -1,0 +1,5 @@
+<%= form_tag("/search", method: "get") do %>
+	<%= label_tag(:amount, "$pare Change:") %>
+	<%= number_field_tag(:amount) %>
+	<%= submit_tag("Search")%>
+<% end %>

@@ -1,4 +1,4 @@
-class HomeController < ApplicationController
+class SearchController < ApplicationController
 
   def index
     @listings = GetEtsy.get_active_listings
