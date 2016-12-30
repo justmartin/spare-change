@@ -1,0 +1,2 @@
+class GetEtsy < ApplicationRecord
+end

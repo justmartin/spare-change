@@ -10,7 +10,12 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20161229222247) do
+ActiveRecord::Schema.define(version: 20161230183736) do
+
+  create_table "get_etsies", force: :cascade do |t|
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
 
   create_table "get_etsy_data", force: :cascade do |t|
     t.datetime "created_at", null: false
