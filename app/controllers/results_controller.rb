@@ -1,7 +1,7 @@
 class ResultsController < ApplicationController
 
   def index
-    @listings = GetEtsy.get_price_listings
+    @listings = GetEtsy.loop_listings(params[:amount])
   end
 
 end

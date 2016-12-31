@@ -17,5 +17,15 @@ class GetEtsy < ApplicationRecord
 
     @parsed = JSON.parse(response)
   end
+
+  def self.loop_listings(amount)
+    @arr = []
+    get_active_listings["results"].each do |listing|
+      if listing["price"].to_i <= amount 
+        @arr.push(listing)
+      end
+    end
+    @arr
+  end
   
 end
