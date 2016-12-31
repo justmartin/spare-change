@@ -11,7 +11,11 @@ class GetEtsy < ApplicationRecord
   end
 
   def self.get_price_listings
-    get_active_listings["results"]
+    uri = URI("https://openapi.etsy.com/v2/listings/active?&api_key=hyd3pgxe41bbdxlbieh53xpa&includes=price:20")
+    
+    response = Net::HTTP.get(uri)
+
+    @parsed = JSON.parse(response)
   end
   
 end

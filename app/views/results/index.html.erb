@@ -1,7 +1,2 @@
-<%= @listings[0]["price"] %>
+<%= @listings %>
 
-<ul>
-	<% @listings.each do |listing| %>
-		 <li><%= listing["price"] unless listing["price"].to_i > params[:amount].to_i %></li> 
-	<% end %>
-</ul>
