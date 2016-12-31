@@ -9,5 +9,9 @@ class GetEtsy < ApplicationRecord
 
     @parsed = JSON.parse(response)
   end
+
+  def self.get_price_listings
+    get_active_listings["results"]
+  end
   
 end
