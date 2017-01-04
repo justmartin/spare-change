@@ -1,2 +1,11 @@
-<%= @listings %>
-
+<ul>
+	<% @listings["results"].each do |listing| %>
+		<li>
+			<%= listing["price"] %> <br>
+			<%= listing["title"] %> <br>
+			<%= listing["description"] %> <br>
+			<img src="<%= listing["Images"][0]["url_fullxfull"] %>" height="300px"> <br>
+			<a href="<%= listing["url"] %>">View</a>
+		</li>
+	<% end %>
+</ul>
