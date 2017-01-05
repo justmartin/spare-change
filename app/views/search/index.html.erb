@@ -1,24 +1,25 @@
-<div class="site-wrapper">
-  <div class="site-wrapper-inner">
-    <div class="cover-container">
-
-      <div class="inner cover">
-        <h1 class="cover-heading">&#36;pare &#162;hange</h1>
-        <p class="lead">Enter your amount to see what you could buy</p>
-        <%= form_tag("/search", method: "get") do %>
-					<%= number_field_tag(:amount) %>
-					<%= submit_tag("Search")%>
-				<% end %>
-      </div>
-      <div class="mastfoot">
-        <div class="inner">
-          <p>&#169; 2017 JLM</p>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
-
+<body class="search-body">
+	<div class="site-wrapper">
+	  <div class="site-wrapper-inner">
+	    <div class="cover-container">
+	      <div class="inner cover">
+	        <h1 class="cover-heading">&#36;pare &#162;hange</h1>
+	        <p class="lead">Enter your amount to see what you could buy</p>
+	        <%= form_tag("/search", method: "get") do %>
+	        	<%= label_tag(:amount, "$pare Change:") %>
+						<%= number_field_tag(:amount) %>
+						<%= submit_tag("Search")%>
+					<% end %>
+	      </div>
+	      <div class="mastfoot">
+	        <div class="inner">
+	          <p>&#169; 2017 JLM</p>
+	        </div>
+	      </div>
+	    </div>
+	  </div>
+	</div>
+</body>
 
 
 
