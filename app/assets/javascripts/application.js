@@ -19,11 +19,25 @@
 $(document).ready(function() {
 
 	$("#show-results2").click(showResults2);
+	$("#show-results3").click(showResults3);
+	$("#show-results4").click(showResults4);
 
 	function showResults2(event){
 		event.preventDefault();
 		$("#show-results2").hide();
 		$('#second-batch').slideDown();
+	}
+
+	function showResults3(event){
+		event.preventDefault();
+		$("#show-results3").hide();
+		$('#third-batch').slideDown();
+	}
+
+	function showResults4(event){
+		event.preventDefault();
+		$("#show-results4").hide();
+		$('#fourth-batch').slideDown();
 	}
 
 });
