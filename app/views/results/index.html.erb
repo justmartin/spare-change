@@ -5,19 +5,40 @@
   </div>
 </div>
 
-<div class="card-columns">
-	<% @listings["results"].each do |listing| %>
-	  <div class="card">
-	  	<h3 class="card-header text-xl-center">$<%= listing["price"] %></h3>
-	    <img class="card-img-top img-fluid" src="<%= listing["Images"][0]["url_fullxfull"] %>" alt="Card image cap">
-	    <div class="card-block">
-	      <h4 class="card-title"><%= listing["title"] %></h4>
-	      <p class="card-text"><%= listing["description"].first(100) %>...</p>
-	      <a href="<%= listing["url"] %>"class="card-text"><small class="text-muted">View</small></a>
-	    </div>
-	  </div>
- <% end %>
+<div id=first-batch>
+	<div class="card-columns">
+		<% @listings["results"].each do |listing| %>
+		  <div class="card">
+		  	<h3 class="card-header text-xl-center">$<%= listing["price"] %></h3>
+		    <img class="card-img-top img-fluid" src="<%= listing["Images"][0]["url_fullxfull"] %>" alt="Card image cap">
+		    <div class="card-block">
+		      <h4 class="card-title"><%= listing["title"] %></h4>
+		      <p class="card-text"><%= listing["description"].first(100) %>...</p>
+		      <a href="<%= listing["url"] %>"class="card-text"><small class="text-muted">View</small></a>
+		    </div>
+		  </div>
+		<% end %>
+	
+	</div>
+
+	<p id="show-results2">View More</p>
 </div>
 
-<a href="/results2">Next Page</a>
+<div id="second-batch" class="hide">
+	<div class="card-columns">
+		<% @listings2["results"].each do |listing| %>
+		  <div class="card">
+		  	<h3 class="card-header text-xl-center">$<%= listing["price"] %></h3>
+		    <img class="card-img-top img-fluid" src="<%= listing["Images"][0]["url_fullxfull"] %>" alt="Card image cap">
+		    <div class="card-block">
+		      <h4 class="card-title"><%= listing["title"] %></h4>
+		      <p class="card-text"><%= listing["description"].first(100) %>...</p>
+		      <a href="<%= listing["url"] %>"class="card-text"><small class="text-muted">View</small></a>
+		    </div>
+		  </div>
+		<% end %>
+			
+	</div>
 
+	<p id="show-results3">View More</p>
+</div>
