@@ -22,20 +22,17 @@ $(document).ready(function() {
 	$("#show-results3").click(showResults3);
 	$("#show-results4").click(showResults4);
 
-	function showResults2(event){
-		event.preventDefault();
+	function showResults2(){
 		$("#show-results2").hide();
 		$('#second-batch').slideDown();
 	}
 
-	function showResults3(event){
-		event.preventDefault();
+	function showResults3(){
 		$("#show-results3").hide();
 		$('#third-batch').slideDown();
 	}
 
-	function showResults4(event){
-		event.preventDefault();
+	function showResults4(){
 		$("#show-results4").hide();
 		$('#fourth-batch').slideDown();
 	}

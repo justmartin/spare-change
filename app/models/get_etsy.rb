@@ -22,7 +22,7 @@ class GetEtsy < ApplicationRecord
     request_etsy_info(uri)
   end
 
-  private #=====================================================
+  private
 
   def self.request_etsy_info(uri)
     response = Net::HTTP.get(uri)
