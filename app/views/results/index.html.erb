@@ -11,7 +11,7 @@
 			<% @listings["results"].each do |listing| %>
 			  <div class="card">
 			  	<h3 class="card-header text-xl-center">$<%= listing["price"] %></h3>
-			    <a href="<%= listing["url"] %>"class="card-text"><img class="card-img-top img-fluid" src="<%= listing["Images"][0]["url_fullxfull"] %>" alt="Card image cap"></a>
+			    <a href="<%= listing["url"] %>" target="_blank" class="card-text"><img class="card-img-top img-fluid" src="<%= listing["Images"][0]["url_fullxfull"] %>" alt="Card image cap"></a>
 			    <div class="card-block">
 			      <h4 class="card-title"><%= listing["title"] %></h4>
 			      <p class="card-text"><%= listing["description"].first(100) %>...</p>
@@ -29,7 +29,7 @@
 			<% @listings2["results"].each do |listing| %>
 			  <div class="card">
 			  	<h3 class="card-header text-xl-center">$<%= listing["price"] %></h3>
-			    <a href="<%= listing["url"] %>"class="card-text"><img class="card-img-top img-fluid" src="<%= listing["Images"][0]["url_fullxfull"] %>" alt="Card image cap"></a>
+			    <a href="<%= listing["url"] %>" target="_blank" class="card-text"><img class="card-img-top img-fluid" src="<%= listing["Images"][0]["url_fullxfull"] %>" alt="Card image cap"></a>
 			    <div class="card-block">
 			      <h4 class="card-title"><%= listing["title"] %></h4>
 			      <p class="card-text"><%= listing["description"].first(100) %>...</p>
@@ -47,7 +47,7 @@
 			<% @listings3["results"].each do |listing| %>
 			  <div class="card">
 			  	<h3 class="card-header text-xl-center">$<%= listing["price"] %></h3>
-			    <a href="<%= listing["url"] %>"class="card-text"><img class="card-img-top img-fluid" src="<%= listing["Images"][0]["url_fullxfull"] %>" alt="Card image cap"></a>
+			    <a href="<%= listing["url"] %>" target="_blank" class="card-text"><img class="card-img-top img-fluid" src="<%= listing["Images"][0]["url_fullxfull"] %>" alt="Card image cap"></a>
 			    <div class="card-block">
 			      <h4 class="card-title"><%= listing["title"] %></h4>
 			      <p class="card-text"><%= listing["description"].first(100) %>...</p>
@@ -65,7 +65,7 @@
 			<% @listings4["results"].each do |listing| %>
 			  <div class="card">
 			  	<h3 class="card-header text-xl-center">$<%= listing["price"] %></h3>
-			    <a href="<%= listing["url"] %>"class="card-text"><img class="card-img-top img-fluid" src="<%= listing["Images"][0]["url_fullxfull"] %>" alt="Card image cap"></a>
+			    <a href="<%= listing["url"] %>" target="_blank" class="card-text"><img class="card-img-top img-fluid" src="<%= listing["Images"][0]["url_fullxfull"] %>" alt="Card image cap"></a>
 			    <div class="card-block">
 			      <h4 class="card-title"><%= listing["title"] %></h4>
 			      <p class="card-text"><%= listing["description"].first(100) %>...</p>
