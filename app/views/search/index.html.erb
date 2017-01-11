@@ -1,15 +1,23 @@
-<div class="search-content">
+<body id="search-body">
+
+	<div class="search-content">
 	<h1 class="search-title">&#36;pare &#162;hange</h1>
 
 	<p>Enter your amount to see what you could buy</p>
 		<%= form_tag("/search", method: "get") do %>
 			<%= number_field_tag(:amount) %> <br>
-			<%= submit_tag("Search")%>
+			<%= submit_tag("Search", class: "search-button")%>
 		<% end %>
-</div>
+	</div>
 
-<footer class="search-footer">
-  <p>&#169; 2017 JLM</p>
-</footer>
+
+	<footer class="search-footer">
+	  <div class="container">
+	  	<p class="footer-text">&#169; 2017 JLM</p>
+	  </div>
+	</footer>
+
+</body>
+
 
 
