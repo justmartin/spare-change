@@ -1,92 +1,94 @@
-<div class="jumbotron jumbotron-fluid">
-  <div class="container">
-    <h1 class="display-3 text-xl-center">$<%= params[:amount] %></h1>
-    <p class="lead text-xl-center">Check Out What You Could Blow Your Money On!</p>
-  </div>
-</div>
-
-<div class="container">
-	<div id=first-batch>
-		<div class="card-columns">
-			<% @listings["results"].each do |listing| %>
-			  <div class="card">
-			  	<h3 class="card-header text-xl-center">$<%= listing["price"] %></h3>
-			    <a href="<%= listing["url"] %>" target="_blank" class="card-text"><img class="card-img-top img-fluid" src="<%= listing["Images"][0]["url_fullxfull"] %>" alt="Card image cap"></a>
-			    <div class="card-block">
-			      <h4 class="card-title"><%= listing["title"] %></h4>
-			      <p class="card-text"><%= listing["description"].first(100) %>...</p>
-			      <a href="<%= listing["url"] %>"class="card-text"><small class="text-muted">View</small></a>
-			    </div>
-			  </div>
-			<% end %>
-		
-		</div>
-
-		<div class="button-holder">
-			<button id="show-results2" type="button" class="btn more-button">View More</button>
-		</div>
+<body id="results-body">
+	<div class="jumbotron jumbotron-fluid">
+	  <div class="container">
+	    <h1 class="display-3 text-xl-center">$<%= params[:amount] %></h1>
+	    <p class="lead text-xl-center">Check Out What You Could Blow Your Money On!</p>
+	  </div>
 	</div>
 
-	<div id="second-batch" class="hide">
-		<div class="card-columns">
-			<% @listings2["results"].each do |listing| %>
-			  <div class="card">
-			  	<h3 class="card-header text-xl-center">$<%= listing["price"] %></h3>
-			    <a href="<%= listing["url"] %>" target="_blank" class="card-text"><img class="card-img-top img-fluid" src="<%= listing["Images"][0]["url_fullxfull"] %>" alt="Card image cap"></a>
-			    <div class="card-block">
-			      <h4 class="card-title"><%= listing["title"] %></h4>
-			      <p class="card-text"><%= listing["description"].first(100) %>...</p>
-			      <a href="<%= listing["url"] %>"class="card-text"><small class="text-muted">View</small></a>
-			    </div>
-			  </div>
-			<% end %>
-				
+	<div class="container">
+		<div id=first-batch>
+			<div class="card-columns">
+				<% @listings["results"].each do |listing| %>
+				  <div class="card">
+				  	<h3 class="card-header text-xl-center">$<%= listing["price"] %></h3>
+				    <a href="<%= listing["url"] %>" target="_blank" class="card-text"><img class="card-img-top img-fluid" src="<%= listing["Images"][0]["url_fullxfull"] %>" alt="Card image cap"></a>
+				    <div class="card-block">
+				      <h4 class="card-title"><%= listing["title"] %></h4>
+				      <p class="card-text"><%= listing["description"].first(100) %>...</p>
+				      <a href="<%= listing["url"] %>"class="card-text"><small class="text-muted">View</small></a>
+				    </div>
+				  </div>
+				<% end %>
+			
+			</div>
+
+			<div class="button-holder">
+				<button id="show-results2" type="button" class="btn more-button">View More</button>
+			</div>
 		</div>
 
-		<div class="button-holder">
-			<button id="show-results3" type="button" class="btn more-button">View More</button>
+		<div id="second-batch" class="hide">
+			<div class="card-columns">
+				<% @listings2["results"].each do |listing| %>
+				  <div class="card">
+				  	<h3 class="card-header text-xl-center">$<%= listing["price"] %></h3>
+				    <a href="<%= listing["url"] %>" target="_blank" class="card-text"><img class="card-img-top img-fluid" src="<%= listing["Images"][0]["url_fullxfull"] %>" alt="Card image cap"></a>
+				    <div class="card-block">
+				      <h4 class="card-title"><%= listing["title"] %></h4>
+				      <p class="card-text"><%= listing["description"].first(100) %>...</p>
+				      <a href="<%= listing["url"] %>"class="card-text"><small class="text-muted">View</small></a>
+				    </div>
+				  </div>
+				<% end %>
+					
+			</div>
+
+			<div class="button-holder">
+				<button id="show-results3" type="button" class="btn more-button">View More</button>
+			</div>
+		</div>
+
+		<div id="third-batch" class="hide">
+			<div class="card-columns">
+				<% @listings3["results"].each do |listing| %>
+				  <div class="card">
+				  	<h3 class="card-header text-xl-center">$<%= listing["price"] %></h3>
+				    <a href="<%= listing["url"] %>" target="_blank" class="card-text"><img class="card-img-top img-fluid" src="<%= listing["Images"][0]["url_fullxfull"] %>" alt="Card image cap"></a>
+				    <div class="card-block">
+				      <h4 class="card-title"><%= listing["title"] %></h4>
+				      <p class="card-text"><%= listing["description"].first(100) %>...</p>
+				      <a href="<%= listing["url"] %>"class="card-text"><small class="text-muted">View</small></a>
+				    </div>
+				  </div>
+				<% end %>
+					
+			</div>
+
+			<div class="button-holder">
+				<button id="show-results4" type="button" class="btn more-button">View More</button>
+			</div>
+		</div>
+
+		<div id="fourth-batch" class="hide">
+			<div class="card-columns">
+				<% @listings4["results"].each do |listing| %>
+				  <div class="card">
+				  	<h3 class="card-header text-xl-center">$<%= listing["price"] %></h3>
+				    <a href="<%= listing["url"] %>" target="_blank" class="card-text"><img class="card-img-top img-fluid" src="<%= listing["Images"][0]["url_fullxfull"] %>" alt="Card image cap"></a>
+				    <div class="card-block">
+				      <h4 class="card-title"><%= listing["title"] %></h4>
+				      <p class="card-text"><%= listing["description"].first(100) %>...</p>
+				      <a href="<%= listing["url"] %>"class="card-text"><small class="text-muted">View</small></a>
+				    </div>
+				  </div>
+				<% end %>
+					
+			</div>
+
+			<div class="button-holder">
+				<a href="/"><button type="button" class="btn search-again-button">Search Again</button></a>
+			</div>
 		</div>
 	</div>
-
-	<div id="third-batch" class="hide">
-		<div class="card-columns">
-			<% @listings3["results"].each do |listing| %>
-			  <div class="card">
-			  	<h3 class="card-header text-xl-center">$<%= listing["price"] %></h3>
-			    <a href="<%= listing["url"] %>" target="_blank" class="card-text"><img class="card-img-top img-fluid" src="<%= listing["Images"][0]["url_fullxfull"] %>" alt="Card image cap"></a>
-			    <div class="card-block">
-			      <h4 class="card-title"><%= listing["title"] %></h4>
-			      <p class="card-text"><%= listing["description"].first(100) %>...</p>
-			      <a href="<%= listing["url"] %>"class="card-text"><small class="text-muted">View</small></a>
-			    </div>
-			  </div>
-			<% end %>
-				
-		</div>
-
-		<div class="button-holder">
-			<button id="show-results4" type="button" class="btn more-button">View More</button>
-		</div>
-	</div>
-
-	<div id="fourth-batch" class="hide">
-		<div class="card-columns">
-			<% @listings4["results"].each do |listing| %>
-			  <div class="card">
-			  	<h3 class="card-header text-xl-center">$<%= listing["price"] %></h3>
-			    <a href="<%= listing["url"] %>" target="_blank" class="card-text"><img class="card-img-top img-fluid" src="<%= listing["Images"][0]["url_fullxfull"] %>" alt="Card image cap"></a>
-			    <div class="card-block">
-			      <h4 class="card-title"><%= listing["title"] %></h4>
-			      <p class="card-text"><%= listing["description"].first(100) %>...</p>
-			      <a href="<%= listing["url"] %>"class="card-text"><small class="text-muted">View</small></a>
-			    </div>
-			  </div>
-			<% end %>
-				
-		</div>
-
-		<div class="button-holder">
-			<a href="/"><button type="button" class="btn search-again-button">Search Again</button></a>
-		</div>
-	</div>
-</div>
+</body>
