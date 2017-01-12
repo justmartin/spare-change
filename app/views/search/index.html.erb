@@ -1,11 +1,11 @@
 <body id="search-body">
 
 	<div class="search-content">
-	<h1 class="search-title">&#36;pare &#162;hange</h1>
+	<h1 class="search-title"><span class="title-letter">&#36;</span>pare <span class="title-letter">&#162;</span>hange</h1>
 
-	<p>Enter your amount to see what you could buy</p>
+	<p class="search-text">Enter Your Amount To See What You Could Buy</p>
 		<%= form_tag("/search", method: "get") do %>
-			<%= number_field_tag(:amount) %> <br>
+			<%= number_field_tag(:amount, nil, class: "amount-input", min: 0, placeholder: "amount", required: true) %> <br>
 			<%= submit_tag("Search", class: "search-button")%>
 		<% end %>
 	</div>
