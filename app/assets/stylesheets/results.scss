@@ -2,6 +2,10 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
+.container {
+	font-family: 'Comfortaa', cursive;
+}
+
 .hide {
 	display: none;
 }
@@ -11,6 +15,7 @@
 }
 
 .display-3 {
+	font-size: 5em !important;
 	color: #ffd700 !important;
 }
 
